@@ -12,7 +12,6 @@ public class RobotMap {
     public static int backRightWheel = 1;
     public static int backLeftWheel = 2;
     public static int frontLeftWheel = 3;
-    
     public static int leftShooter = 4;
     public static int rightShooter = 5;
 }

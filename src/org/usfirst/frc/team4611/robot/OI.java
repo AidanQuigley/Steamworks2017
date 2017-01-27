@@ -34,6 +34,7 @@ public class OI {
         rightJoy = new Joystick(1);
         shootbut = new JoystickButton(leftJoy, 1);
         testButton = new JoystickButton(rightJoy, 0);
+        spikeRelay = new Relay(9);
     	//shootbut.whileHeld (new DualWheelShooter());	
 
         

@@ -18,9 +18,13 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+<<<<<<< HEAD
 //import org.usfirst.frc.team4611.robot.commands.DualWheelShooter;
 import org.usfirst.frc.team4611.robot.commands.SpikeRelay;
+=======
+>>>>>>> e2068ea528927f3d9b4f71c584ac7fa8352a1b7d
 import org.usfirst.frc.team4611.robot.commands.UltrasonicRange;
+import org.usfirst.frc.team4611.robot.commands.testSR;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -38,7 +42,7 @@ public class Robot extends IterativeRobot {
 	public static rightSide rightS;
 	//public static DualWheelShooter dw;
 	public UltrasonicRange ultra;
-	public SpikeRelay sr;
+	public testSR sr;
 	// public static Motor m = new Motor();
 	// public static ButtonOLS n = new ButtonOLS();
 	public static boolean dir = false;
@@ -128,7 +132,7 @@ public class Robot extends IterativeRobot {
 		if (this.autonomousCommand != null) {
 			this.autonomousCommand.cancel();
 		}
-		sr = new SpikeRelay();
+		sr = new testSR();
 		ultra = new UltrasonicRange();
 
 	}
@@ -140,6 +144,7 @@ public class Robot extends IterativeRobot {
 	public void teleopPeriodic() {
 		Scheduler.getInstance().run();
 		// LiveWindow.run();
+		sr.spike();
 		ultra.ultrasonicMeasurement();
 	}
 
