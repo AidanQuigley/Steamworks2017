@@ -5,7 +5,7 @@ import org.usfirst.frc.team4611.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.Relay;
 
-public class SpikeRelay {
+public class testSR {
 	public Relay spikeRelay;	
 	boolean buttonState = Robot.oi.testButton.get();
 	

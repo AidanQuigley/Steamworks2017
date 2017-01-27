@@ -18,8 +18,8 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
-import org.usfirst.frc.team4611.robot.commands.SpikeRelay;
 import org.usfirst.frc.team4611.robot.commands.UltrasonicRange;
+import org.usfirst.frc.team4611.robot.commands.testSR;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -37,7 +37,7 @@ public class Robot extends IterativeRobot {
 	public static rightSide rightS;
 	public static DualWheels dw;
 	public UltrasonicRange ultra;
-	public SpikeRelay sr;
+	public testSR sr;
 	// public static Motor m = new Motor();
 	// public static ButtonOLS n = new ButtonOLS();
 	public static boolean dir = false;
@@ -127,7 +127,7 @@ public class Robot extends IterativeRobot {
 		if (this.autonomousCommand != null) {
 			this.autonomousCommand.cancel();
 		}
-		sr = new SpikeRelay();
+		sr = new testSR();
 		ultra = new UltrasonicRange();
 
 	}
