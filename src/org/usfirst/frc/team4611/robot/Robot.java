@@ -18,6 +18,7 @@ import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+//import org.usfirst.frc.team4611.robot.commands.DualWheelShooter;
 import org.usfirst.frc.team4611.robot.commands.SpikeRelay;
 import org.usfirst.frc.team4611.robot.commands.UltrasonicRange;
 
@@ -35,7 +36,7 @@ public class Robot extends IterativeRobot {
 	public static OI oi;
 	public static leftSide leftS; 
 	public static rightSide rightS;
-	public static DualWheels dw;
+	//public static DualWheelShooter dw;
 	public UltrasonicRange ultra;
 	public SpikeRelay sr;
 	// public static Motor m = new Motor();
@@ -63,7 +64,7 @@ public class Robot extends IterativeRobot {
 		// server.startAutomaticCapture("cam1");
 		leftS = new leftSide();
 		rightS = new rightSide();
-		dw = new DualWheels();
+		//dw = new DualWheels();
 		oi = new OI();
 		
 		prefs = Preferences.getInstance();
