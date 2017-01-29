@@ -7,16 +7,16 @@ import edu.wpi.first.wpilibj.Relay;
 
 public class testSR {
 	public Relay spikeRelay;	
-	boolean buttonState = Robot.oi.testButton.get();
+	boolean buttonState = Robot.oi.testButton.get(); //true= on, false =off (double check)
 	
 	public void spike(){			
 		spikeRelay = new Relay(RobotMap.spikeRelay);
-		spikeRelay.set(Relay.Value.kOff);
+		spikeRelay.set(Relay.Value.kOff); //Value is off (default is off)
 		
-		if(buttonState  == false){
-			spikeRelay.set(Relay.Value.kOff);
-		}else{
-			spikeRelay.set(Relay.Value.kOn);
+		if(buttonState  == false){ //if button is off
+			spikeRelay.set(Relay.Value.kOff);//stay off
+		}else{//if button is on
+			spikeRelay.set(Relay.Value.kOn); //stay on
 		}
 	}
 }
