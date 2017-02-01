@@ -14,7 +14,7 @@ public class RobotMap {
     public static int backRightWheel = 1;
     public static int backLeftWheel = 2;
     public static int frontLeftWheel = 3;
-    
+    public static int feederPort = 6;
     public static int shooter = 5;
 	public static int cimMotor = 4;
 	public static int relayPort = 3;

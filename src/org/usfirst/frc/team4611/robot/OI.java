@@ -1,6 +1,7 @@
 package org.usfirst.frc.team4611.robot;
 
 
+import org.usfirst.frc.team4611.robot.commands.FeederTest;
 import org.usfirst.frc.team4611.robot.commands.relaySpike;
 
 //import org.usfirst.frc.team4611.robot.commands.ButtonFast;
@@ -12,6 +13,7 @@ import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.Relay.Direction;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.command.Command;
 
 
 /**
@@ -30,12 +32,13 @@ public class OI {
 	public Button med = new JoystickButton(leftJoy, 3);
 	public Button fast= new JoystickButton(leftJoy, 5);
 	public static Button light = new JoystickButton(leftJoy, 6);
-    
+    public static Button feederControl = new JoystickButton(leftJoy, 7);
     public OI() {
     	//this.slow.whileHeld(new ButtonSlow());
 		//this.med.whileHeld(new ButtonMed());
 		//this.fast.whileHeld(new ButtonFast());
     	light.toggleWhenPressed(new relaySpike());
+    	feederControl.toggleWhenPressed(new FeederTest());
     }
     public double filter(double raw) //Modifies the joystick input to be something cleaner to output to motors.
     {

@@ -4,6 +4,7 @@ package org.usfirst.frc.team4611.robot;
 
 
 import org.usfirst.frc.team4611.robot.subsystems.CimMotor;
+import org.usfirst.frc.team4611.robot.subsystems.FeederTestSub;
 //import org.usfirst.frc.team4611.robot.subsystems.ButtonOLS;
 //import org.usfirst.frc.team4611.robot.subsystems.Motor;
 //import org.usfirst.frc.team4611.robot.subsystems.VisionTank;
@@ -17,11 +18,13 @@ import edu.wpi.first.wpilibj.Preferences;
 import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
+import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.networktables.NetworkTable;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import org.usfirst.frc.team4611.robot.commands.UltrasonicRange;
+import org.usfirst.frc.team4611.robot.commands.FeederTest;
 import org.usfirst.frc.team4611.robot.commands.Gyro;
 
 /**
@@ -40,6 +43,7 @@ public class Robot extends IterativeRobot {
     public static CimMotor s;
     public UltrasonicRange ultra;
     public Gyro gy;
+    public static FeederTestSub fd;
     //public static Motor m = new Motor();
 	//public static ButtonOLS n = new ButtonOLS();
 	public static boolean dir = false;
@@ -134,6 +138,7 @@ public class Robot extends IterativeRobot {
             }
         ultra = new UltrasonicRange();
         gy = new Gyro();
+        fd = new FeederTestSub();
     }
 
     /**
