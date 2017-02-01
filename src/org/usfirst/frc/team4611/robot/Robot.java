@@ -68,11 +68,12 @@ public class Robot extends IterativeRobot {
         //server.setQuality(50);
         //server.startAutomaticCapture("cam1");
 
-        oi = new OI();
+        fd = new FeederTestSub();
          leftS = new leftSide();
         rightS = new rightSide();
         s = new CimMotor();
         prefs = Preferences.getInstance();
+        oi = new OI();
        
         
         this.chooser = new SendableChooser();
@@ -138,7 +139,6 @@ public class Robot extends IterativeRobot {
             }
         ultra = new UltrasonicRange();
         gy = new Gyro();
-        fd = new FeederTestSub();
     }
 
     /**
